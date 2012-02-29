@@ -1,0 +1,21 @@
+h1 Sijainnit
+table
+	thead
+		tr
+			th Sijainti
+			th Paikalla
+	tbody
+		each place in places
+			tr
+				td= place 
+				td 
+					if (currentPlace == place)
+						span x
+h2 Uusi sijainti
+form(method="POST", action="/places")
+	div
+		label Nimi
+			input(type="text", name="name")
+	div
+		input(type="submit", value="Lisää")
+
