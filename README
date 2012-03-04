@@ -1,0 +1,22 @@
+WhereIsHe
+========
+
+A software for tracking where your coworkers/friends are. This project is still far from complete.
+
+Basic features:
+* Allows setting up places where you can be
+* You can share places with groups
+* Allows creating a view which contains all the places and people in a group(useful for a big screen like tv)
+
+Possible ways to track:
+* Web ui for marking where you are
+* Phone app for reading GPS coordinates or wlans
+* Login/Logout of computer
+* Facebook/Foursquares integration?
+
+Technologies:
+* REST based API with Node.js and Express
+* Data stored in MongoDB
+* UI made with static html / javascript
+
+
