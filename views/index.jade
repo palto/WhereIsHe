@@ -7,9 +7,9 @@ table
 	tbody
 		each place in places
 			tr
-				td= place 
+				td= place.name 
 				td 
-					if (currentPlace == place)
+					if (currentPlace == place.name)
 						span x
 h2 Uusi sijainti
 form(method="POST", action="/places")
