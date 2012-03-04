@@ -2,21 +2,24 @@
 /*
  * GET home page.
  */
-var placeProvider = require('../placeprovider').placeProvider;
+var Place = require('../models/Place').Place;
 var currentPlace = "Töissä"
 exports.index = function(req, res){
-	placeProvider.findAll(function(error, places){
+	Place.findAll(function(err, places){
 		res.render('index', {title: 'Express', places: places, currentPlace: currentPlace});
 	});
 };
 
 exports.addPlace = function(req, res){
-	placeProvider.save({name: req.param('name')}, function(){
+
+	var place = new Place();
+	place.name = req.param('name');
+	place.save(function(){
 		res.redirect('/');	
 	});
 }
 exports.listPlaces = function(req, res){
-	placeProvider.findAll(function(error, places){
+	Place.findAll(function(error, places){
 		res.send(JSON.stringify(places));
 	});
 }
