@@ -20,10 +20,3 @@ form(method="POST", action="/places")
 		input(type="submit", value="Lisää")
 a#countplaces(href="") Count places
 div#placesAjax
-script#placesTemplate(type='text/template')
-	<h1>Paikat</h1>
-	<ul>
-	{{#places}}
-	<li>{{name}}</li>
-	{{/places}}
-	</ul>

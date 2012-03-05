@@ -1,16 +1,5 @@
 h1 Sijainnit
-table
-	thead
-		tr
-			th Sijainti
-			th Paikalla
-	tbody
-		each place in places
-			tr
-				td= place.name 
-				td 
-					if (currentPlace == place.name)
-						span x
+div#placesAjax
 h2 Uusi sijainti
 form(method="POST", action="/places")
 	div
@@ -19,13 +8,4 @@ form(method="POST", action="/places")
 	div
 		input(type="submit", value="Lisää")
 a#countplaces(href="") Count places
-div#placesAjax
-script#placesTemplate(type='text/template')
-	<table>Paikat</table>
-	<thead>
-	<tr>
-	<th>Sijainti</th>
-	{{#places}}
-	<li>{{name}}</li>
-	{{/places}}
-	</ul>
+

@@ -24,3 +24,7 @@ exports.listPlaces = function(req, res){
 		res.send(JSON.stringify(places));
 	});
 }
+
+exports.currentPlace = function(req, res){
+	res.send(JSON.stringify(currentPlace));
+}
