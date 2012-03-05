@@ -2,7 +2,7 @@
 /*
  * GET home page.
  */
-var Placae = require('../models/Place').Place;
+var Place = require('../models/Place').Place;
 var currentPlace = "Töissä"
 exports.index = function(req, res){
 	Place.findAll(function(err, places){

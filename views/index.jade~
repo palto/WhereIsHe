@@ -21,10 +21,8 @@ form(method="POST", action="/places")
 a#countplaces(href="") Count places
 div#placesAjax
 script#placesTemplate(type='text/template')
-	<table>Paikat</table>
-	<thead>
-	<tr>
-	<th>Sijainti</th>
+	<h1>Paikat</h1>
+	<ul>
 	{{#places}}
 	<li>{{name}}</li>
 	{{/places}}

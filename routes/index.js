@@ -14,7 +14,8 @@ exports.addPlace = function(req, res){
 
 	var place = new Place();
 	place.name = req.param('name');
-	place.save(function(){
+	place.save(function(err){
+		console.log(err);
 		res.redirect('/');	
 	});
 }
